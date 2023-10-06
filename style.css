@@ -1,0 +1,342 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  transition: 0.5s;
+  background-color: #e9e9e9;
+}
+header {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: solid red;
+  background-color: #ffffff;
+}
+#img-autora {
+  display: flex;
+}
+#img-autora img {
+  width: 18%;
+}
+#menu ul {
+  display: flex;
+  list-style: none;
+  gap: 45px;
+}
+#menu ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 1.5rem;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+.bi-moon {
+  display: none;
+}
+
+#menu ul li a:hover {
+  text-transform: uppercase; /* Aumenta a palavra quando o mouse é passado em cima */
+  color: #8c24a4;
+  border-bottom: solid 1px;
+}
+
+/*parte dark mode*/
+.dark,
+.dark header {
+  background-color: #263238;
+  color: #ffffff;
+}
+
+#redes-socias {
+  width: 3%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-family: "Press Start 2P", cursive;
+  font-weight: 900;
+  position: absolute;
+  font-size: 3.6vw;
+  text-transform: uppercase;
+  letter-spacing: -1.8px;
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 3px 11px;
+  z-index: 10;
+  margin-left: 64px;
+  margin-top: -15px;
+}
+
+#informacoes_autora {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 85%;
+}
+
+#informacoes_escrita {
+  display: block;
+  margin-left: 5%;
+  margin-top: -3%;
+}
+
+#informacoes_escrita p {
+  font-family: "Press Start 2P", cursive;
+  font-weight: 400;
+  margin-top: 89px;
+  margin-left: 70px;
+  margin-bottom: 15px;
+  width: 156%;
+}
+
+#foto_principal {
+  width: 41%;
+  height: 92%;
+  margin-left: 210px;
+}
+
+#redes-socias img {
+  width: 187%;
+}
+#redes-socias a {
+  width: 53%;
+}
+
+/* 
+========================
+      BUTTON ONE
+========================
+*/
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 61px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: absolute;
+  margin-left: 66px;
+  margin-top: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #030303;
+  border: solid #8c24a4;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#sobre-mim-texto {
+  text-align: center;
+}
+#sobre-mim-texto h2,
+#projetos h2,
+section#formulario h2 {
+  text-align: center;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 3.5rem;
+  color: #8c24a4;
+  margin-bottom: 0.3em;
+}
+#sobre-mim-texto p {
+  font-family: "League Spartan", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+#projetos p {
+  font-family: "League Spartan", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+#coluna-sobre-mim {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 18px;
+}
+#texto-sobre-mim {
+  margin-left: 3em;
+}
+#texto-sobre-mim h3,
+#habilidades h3 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+}
+#texto-sobre-mim p {
+  width: 80%;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1em;
+  line-height: 1.7;
+}
+#habilidades {
+  margin-left: 5rem;
+}
+.habi {
+  margin: 5rem;
+}
+
+section#projetos #flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.img-projeto {
+  width: 360px;
+  height: 460px;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: 8s;
+  cursor: pointer;
+  border-radius: 5%;
+  position: relative;
+}
+.img-projeto:hover {
+  background-position: 100% 100%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #020003e5;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  color: #ffffff;
+  transition: 3s;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.5rem;
+}
+.overlay:hover {
+  opacity: 0;
+}
+
+#btt_projetos {
+  margin-left: 40%;
+}
+#pular-linha {
+  padding-bottom: 10%;
+}
+section#formulario {
+  padding: 80px 4%;
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+form input,
+form textarea {
+  width: 100%;
+  background-color: #ffffff;
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  color: #000000;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.5rem;
+}
+form textarea {
+  resize: none;
+  max-height: 200px;
+}
+form .btn-enviar {
+  margin-top: 20px;
+  text-align: center;
+}
+form .btn-enviar input {
+  width: 120px;
+  background-color: #8c24a4;
+  color: #ffffff;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#css1 {
+  margin-top: 9%;
+  margin-left: 43%;
+}
+#js1 {
+  margin-top: 19%;
+  margin-left: 10%;
+}
+#git {
+  margin-top: 30%;
+  margin-left: 45%;
+}
+#lp {
+  margin-top: 47%;
+  margin-left: -1%;
+}
